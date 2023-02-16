@@ -47,8 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'ancient_application.apps.AncientApplicationConfig',
 ]
+
+CSRF_FAILURE_VIEW = 'ancient_application.views.csrf_failure'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
