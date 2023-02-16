@@ -32,7 +32,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-ohn+-77cxgv^(_u=+5@k_s$z%)&*mu-v(dp0bey6n2hzupi)d$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'news_website.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'website_project',
+        'NAME': 'Pupa',
         'USER': USERNAME,
         'PASSWORD': PASSWORD,
         'HOST': 'localhost',

@@ -7,18 +7,18 @@ from .models import News
 SELECT_LIMIT = 10  # лимит постов на странице
 
 
-def paginator(request, posts):
-    paginate = Paginator(posts, SELECT_LIMIT)
+def paginator(request, news):
+    paginate = Paginator(news, SELECT_LIMIT)
     page_number = request.GET.get('page')
     page = paginate.get_page(page_number)
     return page
 
 
 def main(request):
-    """Главная страница проекта yatube."""
+    """Главная страница сайта."""
 
-    posts = News.objects.all()
-    page = paginator(request, posts)
+    news = News.objects.all()
+    page = paginator(request, news)
     context = {
         'page_obj': page,
     }
