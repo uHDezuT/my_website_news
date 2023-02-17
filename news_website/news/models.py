@@ -35,7 +35,7 @@ class News(models.Model):
     )
     body = models.TextField(
         'Текст новости',
-        max_length=1000,
+        max_length=3000,
         help_text='Введите текст новости'
     )
     image = models.ImageField(

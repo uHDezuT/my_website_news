@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navigations.css' %}">
+<nav class="navbar navbar-light bg-light">
+  <ul class="navi-ul">
+    <a class="navi-li text-decoration-none"
+       href="{% url 'news:main' %}">Главная</a>
+    <li class="navi-li">Галерея</li>
+    <a class="navi-li text-decoration-none"
+       href="{% url 'admin:index' %}">Админка</a>
+    <div class="container-fluid navi-li">
+      <form class="d-flex">
+        <input class="form-control-sm me-2 " type="search" placeholder="Поиск"
+               aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </ul>
+</nav>

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'users.apps.UsersConfig',
     'ancient_application.apps.AncientApplicationConfig',
+    'sorl.thumbnail',
 ]
 
 CSRF_FAILURE_VIEW = 'ancient_application.views.csrf_failure'
