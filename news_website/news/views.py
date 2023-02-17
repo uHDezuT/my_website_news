@@ -23,3 +23,18 @@ def main(request):
         'page_obj': page,
     }
     return render(request, 'news/main.html', context)
+
+
+def news_detail(request, news_id):
+    """Страница с описанием поста."""
+    user_news = get_object_or_404(News, id=news_id)
+    author = user_news.author
+    publish_date = user_news.publish_date
+    news_count = user_news.author.news.count()
+    context = {
+        'news_count': news_count,
+        'user_news': user_news,
+        'author': author,
+        'publish_date': publish_date,
+    }
+    return render(request, 'news/news_detail.html', context)

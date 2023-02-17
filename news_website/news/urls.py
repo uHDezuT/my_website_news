@@ -8,6 +8,7 @@ app_name = 'news'
 
 urlpatterns = [
     path('', views.main, name='main'),
+    path('news/<int:news_id>/', views.news_detail, name='news_detail'),
 ]
 
 if settings.DEBUG:
