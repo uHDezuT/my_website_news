@@ -3,17 +3,17 @@
 {% block title %}{{ user_news.title|slice:":15" }}{% endblock %}
 {% block header %}{% endblock %}
 {% block content %}
-<div class="card mb-3 w-100 p-3 ">
+<div class="card mb-1 w-100 p-3 border-dark">
       <div class="row g-0">
         <div class="col-md-4">
-          {% thumbnail user_news.image "1920x1200" crop="center" upscale=True as im%}
+          {% thumbnail user_news.image "1920x1200" crop="left" upscale=True as im%}
           <img class="img-fluid rounded-start" src="{{ im.url }}" alt="...">
           {% endthumbnail %}
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body ">
             <h5 class="card-title">{{ user_news.title }}</h5>
-            <p class="card-text">{{ user_news.body }}</p>
+            <p class="card-text ">{{ user_news.body }}</p>
             <p class="card-text"><small class="text-muted">Автор:
               {{ author.get_full_name }}</small></p>
             <p class="card-text"><small class="text-muted">Дата публикации:
